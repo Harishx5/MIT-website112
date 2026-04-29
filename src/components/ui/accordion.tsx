@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
@@ -5,11 +6,21 @@ import { ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
+=======
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <AccordionPrimitive.Item
     ref={ref}
     className={cn("border-b", className)}
@@ -17,6 +28,11 @@ const AccordionItem = React.forwardRef<
   />
 ))
 AccordionItem.displayName = "AccordionItem"
+=======
+  <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+));
+AccordionItem.displayName = "AccordionItem";
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
 
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -27,7 +43,11 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
         "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+<<<<<<< HEAD
         className
+=======
+        className,
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
       )}
       {...props}
     >
@@ -35,8 +55,13 @@ const AccordionTrigger = React.forwardRef<
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
+<<<<<<< HEAD
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+=======
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
@@ -49,8 +74,16 @@ const AccordionContent = React.forwardRef<
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
+<<<<<<< HEAD
 ))
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+=======
+));
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1

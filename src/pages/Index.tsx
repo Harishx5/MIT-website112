@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import Layout from '@/components/Layout/Layout';
 import HeroSection from '@/components/Home/HeroSection';
@@ -112,3 +113,19 @@ const Index = () => {
     </Layout>;
 };
 export default Index;
+=======
+// Update this page (the content is just a fallback if you fail to update the page)
+
+const Index = () => {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="text-center">
+        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
+        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+      </div>
+    </div>
+  );
+};
+
+export default Index;
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1

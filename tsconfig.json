@@ -1,5 +1,6 @@
 {
   "files": [],
+<<<<<<< HEAD
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -13,6 +14,13 @@
       "@/*": [
         "./src/*"
       ]
+=======
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
     },
     "noImplicitAny": false,
     "noUnusedParameters": false,
@@ -21,4 +29,8 @@
     "noUnusedLocals": false,
     "strictNullChecks": false
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1

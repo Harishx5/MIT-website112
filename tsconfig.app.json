@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+<<<<<<< HEAD
     "lib": [
       "ES2020",
       "DOM",
@@ -9,17 +10,30 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
+=======
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+=======
+
+    /* Linting */
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
+<<<<<<< HEAD
     "paths": {
       "@/*": [
         "./src/*"
@@ -30,3 +44,13 @@
     "src"
   ]
 }
+=======
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1

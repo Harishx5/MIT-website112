@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -10,16 +13,21 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+<<<<<<< HEAD
   plugins: [
     react(),
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+=======
+  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+<<<<<<< HEAD
   build: {
     target: 'es2015',
     cssCodeSplit: true,
@@ -117,4 +125,6 @@ export default defineConfig(({ mode }) => ({
       target: 'es2020',
     },
   }),
+=======
+>>>>>>> 4eca0755c64cb5f35907e8694bd9712fb0ac5ac1
 }));
