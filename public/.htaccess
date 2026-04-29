@@ -1,0 +1,15 @@
+
+Options -MultiViews
+RewriteEngine On
+
+# Handle specific redirects
+RewriteRule ^news-details/(.*)$ /news [R=301,L]
+RewriteRule ^blog-details/(.*)$ /blog [R=301,L]
+RewriteRule ^about$ /about-us [R=301,L]
+RewriteRule ^contact$ /#contact [R=301,L]
+RewriteRule ^services$ /#services [R=301,L]
+
+# Handle client-side routing - serve index.html for all non-file requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

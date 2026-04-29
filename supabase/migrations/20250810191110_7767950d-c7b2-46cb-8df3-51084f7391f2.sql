@@ -1,0 +1,38 @@
+-- Restore the UI/UX Design service with all original details
+INSERT INTO public.services (
+  name,
+  slug,
+  short_description,
+  long_description,
+  category,
+  starting_price,
+  price_range,
+  delivery_time,
+  features,
+  technologies,
+  is_featured,
+  is_active,
+  display_order,
+  meta_title,
+  meta_description,
+  icon,
+  image
+) VALUES (
+  'UI/UX Design',
+  'ui-ux-design',
+  'Create intuitive and engaging user experiences that delight your customers and drive business success.',
+  'Transform your digital presence with exceptional user interface and user experience design. Our comprehensive UI/UX design services focus on creating intuitive, aesthetically pleasing, and conversion-optimized designs that resonate with your target audience. From user research and wireframing to prototyping and design systems, we ensure every touchpoint delivers a seamless user journey that drives engagement and business results.',
+  'design',
+  30000,
+  'Starting from ₹30,000',
+  '3-6 weeks',
+  ARRAY['User Research', 'Wireframing', 'Prototyping', 'Design Systems', 'Responsive Design', 'Usability Testing', 'Information Architecture', 'Visual Design'],
+  ARRAY['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Principle', 'Framer', 'Zeplin', 'Miro'],
+  true,
+  true,
+  9,
+  'Professional UI/UX Design Services - User-Centered Design Solutions',
+  'Expert UI/UX design services that create intuitive user experiences, improve conversions, and enhance customer satisfaction. From wireframing to prototyping.',
+  'Palette',
+  'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=500&q=80'
+);

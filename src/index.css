@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    
+    /* Service category colors */
+    --service-web: 217 91% 60%;
+    --service-mobile: 258 90% 66%;
+    --service-design: 142 71% 45%;
+    --service-software: 173 80% 40%;
+    --service-analytics: 213 94% 68%;
+    --service-infrastructure: 0 0% 50%;
+    --service-consulting: 258 90% 66%;
+    --service-security: 0 72% 51%;
+    --service-automation: 262 83% 58%;
+    --service-iot: 45 93% 47%;
+    --service-training: 160 84% 39%;
+    --service-surveillance: 215 16% 47%;
+  }
+ 
+  .dark {
+    --background: 217 33% 17%;
+    --foreground: 0 0% 98%;
+    --card: 217 33% 17%;
+    --card-foreground: 0 0% 98%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 33% 25%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 217 33% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    /* Service category colors for dark mode */
+    --service-web: 217 91% 60%;
+    --service-mobile: 258 90% 66%;
+    --service-design: 142 71% 45%;
+    --service-software: 173 80% 40%;
+    --service-analytics: 213 94% 68%;
+    --service-infrastructure: 0 0% 60%;
+    --service-consulting: 258 90% 66%;
+    --service-security: 0 72% 51%;
+    --service-automation: 262 83% 58%;
+    --service-iot: 45 93% 47%;
+    --service-training: 160 84% 39%;
+    --service-surveillance: 215 16% 57%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Mobile-optimized scaling */
+  @media (min-width: 1024px) {
+    #root:not(.login-page) {
+      zoom: 0.88;
+      transform-origin: top left;
+    }
+  }
+
+  /* Login page should be 100% size with full height */
+  .login-page {
+    min-height: 100vh;
+  }
+  
+  .login-page #root {
+    zoom: 1 !important;
+    min-height: 100vh;
+  }
+}
+
+/* Performance-optimized animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes float-no-rotate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-rainbow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2), 0 0 20px rgba(59, 130, 246, 0.1);
+  }
+  33% {
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.2), 0 0 20px rgba(147, 51, 234, 0.1);
+  }
+  66% {
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.2), 0 0 20px rgba(236, 72, 153, 0.1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.15s ease-out;
+}
+
+.animate-scale-out {
+  animation: scale-out 0.15s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.25s ease-out;
+}
+
+.animate-slide-out-right {
+  animation: slide-out-right 0.25s ease-out;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.15s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.15s ease-out;
+}
+
+.animate-floating {
+  animation: floating 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-no-rotate {
+  animation: float-no-rotate 6s ease-in-out infinite;
+}
+
+.animate-glow-rainbow {
+  animation: glow-rainbow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.hover-scale {
+  transition: transform 0.15s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.story-link {
+  position: relative;
+  display: inline-block;
+}
+
+.story-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(var(--primary));
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-out;
+}
+
+.story-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  .animate-floating {
+    animation: none;
+  }
+  
+  .animate-float {
+    animation: none;
+  }
+  
+  .animate-float-no-rotate {
+    animation: none;
+  }
+  
+  .animate-pulse-glow {
+    animation: none;
+  }
+  
+  .animate-glow-rainbow {
+    animation: none;
+  }
+  
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Instant image swap cycle for partner detail page */
+@keyframes bg-swap-cycle {
+  0%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.bg-fade-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-fade-layer {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}

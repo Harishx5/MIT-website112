@@ -1,0 +1,11 @@
+
+# SPA routing - catch all routes and serve index.html
+# This ensures that client-side routing works for direct URL access
+/*    /index.html   200
+
+# Specific redirects for common patterns
+/news-details/*  /news  301
+/blog-details/*  /blog  301
+/about  /about-us  301
+/contact  /#contact  301
+/services  /#services  301

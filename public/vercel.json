@@ -1,0 +1,24 @@
+
+{
+  "routes": [
+    {
+      "src": "/news-details/(.*)",
+      "status": 301,
+      "headers": { "Location": "/news" }
+    },
+    {
+      "src": "/blog-details/(.*)",
+      "status": 301,
+      "headers": { "Location": "/blog" }
+    },
+    {
+      "src": "/about",
+      "status": 301,
+      "headers": { "Location": "/about-us" }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

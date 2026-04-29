@@ -1,0 +1,1 @@
+ALTER TABLE public.trusted_partners ADD COLUMN IF NOT EXISTS info_image_url text;
